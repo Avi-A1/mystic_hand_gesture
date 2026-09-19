@@ -31,10 +31,15 @@ class HandTracker:
     def __init__(self, max_hands=2, detection_conf=0.7, tracking_conf=0.6):
         from mediapipe.tasks import python
         from mediapipe.tasks.python import vision
+        import os
 
         # Create HandLandmarker using the new task API
+        # Get the absolute path to the model file (same directory as this script)
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        model_path = os.path.join(script_dir, 'hand_landmarker.task')
+
         base_options = python.BaseOptions(
-            model_asset_path='hand_landmarker.task'
+            model_asset_path=model_path
         )
         options = vision.HandLandmarkerOptions(
             base_options=base_options,
