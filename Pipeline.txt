@@ -1,0 +1,13 @@
+Webcam
+   ↓
+OpenCV
+   ↓
+MediaPipe Hand Tracking
+   ↓
+Hand Landmark Detection
+   ↓
+Gesture Recognition
+   ↓
+Magic/Particle Engine
+   ↓
+🔥 DOCTOR-STRANGE-STYLE EFFECT
